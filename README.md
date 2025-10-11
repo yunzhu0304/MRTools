@@ -1,5 +1,3 @@
-# MRTools User‘s Guide
-
 # MRTools: Tools for Master Regulator Network Pruning and Annotation
 
 ---
@@ -150,6 +148,39 @@ MRTools_result <- MRTools(
 
 ---
 
+### 📊5. `MRToolsToCytoscape`
+
+Exports the pruned and annotated MR network into **Cytoscape** for interactive visualization.
+
+It creates a network from the pruned Source–Target edges and applies visual styles:
+
+- **Node color**: mapped to logFC (blue → white → red).
+- **Node shape**: TF vs. Others (diamond vs. rectangle).
+- **Node labels**: gene IDs, adjustable font size and font face.
+- **Node size**: customizable height and width.
+
+⚠️ **Important**: Before running this function, ensure that Cytoscape is installed and running on your local computer. Wait until Cytoscape shows
+
+`Automation API listening on port 1234` in its console window.
+
+**Parameters**:
+
+- `MRTResult`: Output from `MRTools()`, i.e. an object of class `MRToolsResult`.
+- `title`: Network title in Cytoscape (default: `"MRTools Network"`).
+- `collection`: Cytoscape network collection name (default: `"MRTools"`).
+- `shap_col`: Column to define node shape (default: `"If_TF"`).
+- `NODE_LABEL_FONT_SIZE`: Label font size (default: `45`).
+- `NODE_HEIGHT`: Node height (default: `60`).
+- `NODE_WIDTH`: Node width (default: `120`).
+- `NODE_LABEL_FONT_FACE`: Font face for labels (default: `"Arial Rounded MT Bold"`).
+
+**Example**:
+
+```r
+# Ensure Cytoscape is open locally before running
+MRToolsToCytoscape(MRTResult = MRTools_result)
+```
+
 ## 🧭Recommended Workflow
 
 ```r
@@ -172,6 +203,10 @@ MRTools_result <- MRTools(
 # Step 4: Inspect results
 head(MRTools_result$MR_list)
 head(MRTools_result$MRgene_property)
+
+# Step 5: Visualize in Cytoscape
+# Ensure Cytoscape is open locally before running:
+MRToolsToCytoscape(MRTResult = MRTools_result)
 ```
 
 ---
@@ -197,4 +232,4 @@ For questions or issues, please contact the package maintainers:
 - **Zhu Yun** (Zhu.Yun@mh-hannover.de)
 - **Xu Yanzhe** (Xu.Yanzhe@mh-hannover.de)
 
-GitHub Repository: [https://github.com/yunzhu0304/MRTools](https://github.com/yunzhu0304/MRTools)
+GitHub Repository: https://github.com/yunzhu0304/MRTools
