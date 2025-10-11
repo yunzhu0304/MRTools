@@ -1,0 +1,20 @@
+Package: MRTools
+Title: Tools for Master Regulator Network from geneXplain
+Version: 0.1.5
+Authors@R: 
+    person("Yun", "Zhu",  ,"Zhu.Yun@mh-hannover.de", role = c("aut", "cre"),
+      person("Yanzhe", "Xu", email = "Xu.Yanzhe@mh-hannover.de", 
+           role = "aut"))
+Description: Functions to organize, prune, and annotate master regulator 
+    networks derived from geneXplain outputs.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: 
+    dplyr,
+    rlang,
+    magrittr
+Suggests: 
+    roxygen2,
+    testthat (>= 3.0.0)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
