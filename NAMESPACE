@@ -2,6 +2,8 @@
 
 export(DEG_fit)
 export(MRTools)
+export(MRToolsToCytoscape)
 export(convert_case)
 export(get_TFlist)
+import(RCy3)
 importFrom(magrittr,"%>%")
