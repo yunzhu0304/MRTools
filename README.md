@@ -213,7 +213,8 @@ MRToolsToCytoscape(MRTResult = MRTools_result)
 
 ## 📝Example Output
 
-### MR_list (Pruned Network)
+### <img width="1673" height="962" alt="image" src="https://github.com/user-attachments/assets/4c7aeda6-44ab-4c3b-aef3-7456218fef73" />
+
 
 ---
 
