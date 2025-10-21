@@ -79,7 +79,7 @@ MRToolsToCytoscape <- function(MRTResult, title = "MRTools Network",collection =
   nodes <- merge(nodes, MRTResult$MRgene_property,
                  by.x = "id", by.y = "GeneSymbol", all.x = TRUE)
 
-
+  nodes$logFC <- ifelse(is.na(nodes$logFC),0,nodes$logFC)
 
   createNetworkFromDataFrames(nodes, edges,
                               title = title,
