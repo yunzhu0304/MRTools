@@ -1,6 +1,6 @@
 Package: MRTools
 Title: Tools for Master Regulator Network from geneXplain
-Version: 0.1.6
+Version: 0.1.7
 Authors@R: 
     person("Yun", "Zhu",  ,"Zhu.Yun@mh-hannover.de", role = c("aut", "cre"),
       person("Yanzhe", "Xu", email = "Xu.Yanzhe@mh-hannover.de", 
