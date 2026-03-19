@@ -137,7 +137,7 @@ MRTools_result <- MRTools(
   GeneXplain_file = GeneXplain_source_target,
   GXP_source = "Source",
   GXP_target = "Target",
-  species = "Homo"
+  species = "Mm"
 )
 ```
 
